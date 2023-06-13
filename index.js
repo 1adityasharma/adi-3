@@ -1,9 +1,9 @@
 const http = require('http');
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hi, changed some code. \n\n\nNode running at 8000! \n\nDeployed via ansible-playbook using jenkins.'
+  const msg = 'Hi, modified. \n\n\nNode running on port 3000! \n\nDeployed via AWS CodePipeline using blue green deployment on ec2.\nNew release!'
   res.end(msg);
 });
 
